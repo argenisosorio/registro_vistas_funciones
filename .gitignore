@@ -1,0 +1,6 @@
+*.*.backup
+*.*~
+*.tar.gz
+*.pyc
+*.log
+*.swp

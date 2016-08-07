@@ -1,0 +1,11 @@
+<h1>Personas</h1>
+<ul>
+    {% for persona in object_list %}
+    <li>{{ persona.nombre }} {{ persona.cedula }}
+    <a href="{% url 'registro:editar' persona.id %}">editar</a>
+    <a href="{% url 'registro:borrar' persona.id %}">borrar</a>
+    </li>
+    {% endfor %}
+</ul>
+
+<a href="{% url 'registro:registrar' %}">Registrar</a>
