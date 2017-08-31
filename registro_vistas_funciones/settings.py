@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 Django settings for registro_vistas_funciones project.
 
