@@ -2,7 +2,10 @@
 # -*- coding: utf-8 -*-from django.shortcuts import render, redirect, get_object_or_404
 from django.forms import ModelForm
 from django.http import HttpResponseRedirect
+from django.shortcuts import redirect
 from registro.models import Persona
+from django.shortcuts import render
+from django.shortcuts import get_object_or_404
 
 
 class PersonaForm(ModelForm):
@@ -27,7 +30,7 @@ def Registrar(request, template_name='registro/registrar.html'):
 
 
 def Editar(request, pk, template_name='registro/registrar.html'):
-    persona= get_object_or_404(Persona, pk=pk)
+    persona = get_object_or_404(Persona, pk=pk)
     form = PersonaForm(request.POST or None, instance=persona)
     if form.is_valid():
         form.save()
